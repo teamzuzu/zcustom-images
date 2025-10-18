@@ -61,7 +61,7 @@ jobs:
           cache-to: type=gha,mode=max
           # Provide platform list here. If you triggered with workflow_dispatch and provided inputs.platforms,
           # that value will be used; otherwise use env.PLATFORMS
-          platform: ${{ github.event.inputs.platforms || env.PLATFORMS }}
+          platforms: ${{ github.event.inputs.platforms || env.PLATFORMS }}
 
       - name: Sign the published Docker image
         if: ${{ github.event_name != 'pull_request' }}
