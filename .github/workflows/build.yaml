@@ -14,7 +14,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: zcustom-images/${{ github.event.inputs.image }}
+  IMAGE_NAME: teamzuzu/${{ github.event.inputs.image }}
   PLATFORMS: linux/arm64,linux/amd64
 
 jobs:
