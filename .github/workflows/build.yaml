@@ -1,4 +1,4 @@
-name: build
+name: build package
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: ${{ github.event.inputs.image }}
   PLATFORMS: linux/arm64,linux/amd64
 
 jobs:
@@ -55,7 +55,7 @@ jobs:
         id: build-and-push
         uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5.0.0
         with:
-          context: ${{ github.event.inputs.image }}/.
+          context: ${{ github.event.inputs.image }}
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
