@@ -1,10 +1,10 @@
-name: create zuzu-devops
+name: puppet-r10k
 
 on:
   push:
     branches: [ "main" ]
     paths:
-      - 'zuzu-devops/**'
+      - 'puppet-r10k/*'
 
 env:
   # Use docker.io for Docker Hub if empty
@@ -52,7 +52,7 @@ jobs:
         id: build-and-push
         uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5.0.0
         with:
-          context: zuzudevops
+          context: puppet-r10k/.
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
