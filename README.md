@@ -1,2 +1,1 @@
-# zuzudevops
-debian based image
+custom images
