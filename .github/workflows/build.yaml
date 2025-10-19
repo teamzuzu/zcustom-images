@@ -4,11 +4,12 @@ on:
   workflow_dispatch:
     inputs:
       image:
-        description: 'select image to guild'
+        description: 'select image to build'
         required: true
         default: 'zuzu-devops'
         type: choice
         options:
+          - test-image
           - zuzu-devops
           - puppet-r10k
 
@@ -20,7 +21,7 @@ env:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     permissions:
       contents: read
       packages: write

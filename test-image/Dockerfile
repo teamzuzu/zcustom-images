@@ -1,0 +1,5 @@
+FROM debian:buster-slim
+ARG TARGETPLATFORM
+ENV TARGETPLATFORM=${TARGETPLATFORM:-linux/amd64}
+RUN echo $TARGETPLATFORM; exit 1
+RUN echo "I am running on $BUILDPLATFORM, building for $TARGETPLATFORM"
