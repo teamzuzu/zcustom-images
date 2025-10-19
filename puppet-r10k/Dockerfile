@@ -1,4 +1,4 @@
-FROM ghcr.io/teamzuzu/zuzudevops:main
+FROM ghcr.io/teamzuzu/zuzu-devops:main
 ARG RUNNER_VERSION=2.318.1
 ENV GITHUB_PERSONAL_TOKEN ""
 ENV GITHUB_OWNER ""
