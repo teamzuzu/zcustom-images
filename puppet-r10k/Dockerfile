@@ -6,6 +6,7 @@ ENV TARGETPLATFORM=${TARGETPLATFORM:-linux/amd64}
 ENV GITHUB_PERSONAL_TOKEN=""
 ENV GITHUB_OWNER=""
 ENV GITHUB_REPOSITORY=""
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt install -qy --no-install-recommends vim jq gnupg2 apt-transport-https procps puppet puppet-lint r10k
 
