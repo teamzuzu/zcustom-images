@@ -4,7 +4,7 @@ ARG RUNNER_VERSION=2.329.0
 ENV GITHUB_PERSONAL_TOKEN ""
 ENV GITHUB_OWNER ""
 ENV GITHUB_REPOSITORY ""
-RUN apt update && apt install -y --no-install-recommends sudo curl vim jq gnupg2 apt-transport-https ruby procps && gem install -VN puppet r10k puppet-lint --clear-sources --no-document && useradd -m github && usermod -aG sudo github && echo "%sudo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && date > /root/puppet-r10k_build-date
+RUN apt install -y --no-install-recommends vim jq gnupg2 apt-transport-https ruby procps && gem install -VN puppet r10k puppet-lint --clear-sources --no-document && useradd -m github && usermod -aG sudo github && echo "%sudo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && date > /root/puppet-r10k_build-date
 COPY /*.* /
 WORKDIR /home/github
 COPY --chown=github:github entrypoint.sh ./entrypoint.sh
