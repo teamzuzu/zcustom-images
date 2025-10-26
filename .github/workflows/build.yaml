@@ -3,6 +3,14 @@ name: build package
 on:
   workflow_dispatch:
     inputs:
+      runner:
+        description: 'runner type'
+        required: true
+        default: 'ubuntu-latest'
+        type: choice
+        options:
+          - ubuntu-latest
+          - self-hosted
       image:
         description: 'select image to build'
         required: true
@@ -22,7 +30,7 @@ jobs:
   build:
 
     #runs-on: ubuntu-latest
-    runs-on: self-hosted
+    runs-on: ${{ github.event.inputs.runner }}
 
     permissions:
       contents: read
