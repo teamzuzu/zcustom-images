@@ -19,7 +19,11 @@ VERSION=$(curl --silent "https://api.github.com/repos/actions/runner/releases/la
 
 printf "$TARGET $VERSION"
 
-curl -O -L https://github.com/actions/runner/releases/download/v$VERSION/actions-runner-linux-$TARGET-$VERSION.tar.gz  
+curl -O -L https://github.com/actions/runner/releases/download/v$VERSION/actions-runner-linux-$TARGET-$VERSION.tar.gz
 tar xzf ./actions-runner-linux-*-*.tar.gz
-./bin/installdependencies.sh 
+
+# wtf
+apt -y install libicu76
+
+./bin/installdependencies.sh
 sudo chown -R github  /home/github
