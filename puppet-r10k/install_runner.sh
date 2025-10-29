@@ -22,8 +22,10 @@ printf "$TARGET $VERSION"
 curl -O -L https://github.com/actions/runner/releases/download/v$VERSION/actions-runner-linux-$TARGET-$VERSION.tar.gz
 tar xzf ./actions-runner-linux-*-*.tar.gz
 
-# wtf
+# this version of icu isn't included in the dependencies script
 apt -y install libicu76
 
 ./bin/installdependencies.sh
+
+# fix ownership
 sudo chown -R github  /home/github
