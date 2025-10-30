@@ -1,8 +1,10 @@
 #!/bin/bash -x
 
+GHOME=/home/github
+
 export DEBIAN_FRONTEND=noninteractive
 
-cd /home/github
+cd ${GHOME}
 
 if [ "$1" = "" ]; then
   echo "no target passed"
@@ -27,5 +29,9 @@ apt -y install libicu76
 
 ./bin/installdependencies.sh
 
+# github hostkey
+mkdir ${GHOME}/.ssh/
+ssh-keyscan github.com > ${GHOME}/.ssh/known_hosts
+
 # fix ownership
-sudo chown -R github  /home/github
+sudo chown -R github ${GHOME}
