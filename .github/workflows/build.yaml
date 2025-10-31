@@ -1,4 +1,4 @@
-name: build 
+name: build
 
 on:
   workflow_dispatch:
@@ -17,9 +17,10 @@ on:
         default: 'zuzu-devops'
         type: choice
         options:
-          - test-image
           - zuzu-devops
           - puppet-r10k
+          - test-image
+          - proxmox-datacenter-controller
 
 env:
   REGISTRY: ghcr.io
