@@ -32,14 +32,14 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: teamzuzu/${{ github.event.inputs.image }}
+  IMAGE_NAME: teamzuzu/${{ github.event.inputs.image:-${PUSH_IMAGE_NAME} }}
   PLATFORMS: linux/arm64,linux/amd64
 
 jobs:
   build:
 
     #runs-on: ubuntu-latest
-    runs-on: ${{ github.event.inputs.runner }}
+    runs-on: ${{ github.event.inputs.runner:-self-hosted }}
 
     permissions:
       contents: read
