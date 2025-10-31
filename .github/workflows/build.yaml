@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       runner:
-        description: 'name of runner'
+        description: 'runner'
         required: true
         default: 'self-hosted'
         type: choice
@@ -11,7 +11,7 @@ on:
           - ubuntu-latest
           - self-hosted
       image:
-        description: 'name of image'
+        description: 'image'
         required: true
         default: 'test-image'
         type: choice
@@ -21,7 +21,7 @@ on:
           - test-image
           - proxmox-datacenter-manager
       platform:
-        description: 'name of image'
+        description: 'platform'
         required: true
         default: 'linux/arm64,linux/amd64'
         type: choice
