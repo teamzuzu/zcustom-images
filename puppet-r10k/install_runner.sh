@@ -21,7 +21,7 @@ VERSION=$(curl --silent "https://api.github.com/repos/actions/runner/releases/la
 
 printf "$TARGET $VERSION"
 
-curl -O -L https://github.com/actions/runner/releases/download/v$VERSION/actions-runner-linux-$TARGET-$VERSION.tar.gz
+curl --silent -O -L https://github.com/actions/runner/releases/download/v$VERSION/actions-runner-linux-$TARGET-$VERSION.tar.gz
 tar xzf ./actions-runner-linux-*-*.tar.gz
 
 # this version of icu isn't included in the dependencies script
