@@ -20,11 +20,19 @@ on:
           - puppet-r10k
           - test-image
           - proxmox-datacenter-manager
+      platform:
+        description: 'name of image'
+        required: true
+        default: 'linux/arm64,linux/amd64'
+        type: choice
+        options:
+          - linux/amd64
+          - linux/arm64
 
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: teamzuzu/${{ github.event.inputs.image }}
-  PLATFORMS: linux/arm64,linux/amd64
+  PLATFORMS: ${{ github.event.inputs.platform }}
 
 jobs:
   build:
