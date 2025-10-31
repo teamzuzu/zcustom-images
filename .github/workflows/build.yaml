@@ -1,26 +1,28 @@
 name: build
-
+inputs:
+  runner:
+    description: 'name of runner'
+    required: true
+    default: 'self-hosted'
+  image:
+    description: 'name of image'
+    required: true
+    default: 'test-image'
 on:
   push:
     paths:
     - 'zuzu-devops/*'
     inputs:
-      runner: 'self-hosted'
-      image: 'zuzu-devops'
+      runner: self-hosted
+      image: zuzu-devops
   workflow_dispatch:
     inputs:
       runner:
-        description: 'runner type'
-        required: true
-        default: 'ubuntu-latest'
         type: choice
         options:
           - ubuntu-latest
           - self-hosted
       image:
-        description: 'select image to build'
-        required: true
-        default: 'zuzu-devops'
         type: choice
         options:
           - zuzu-devops
