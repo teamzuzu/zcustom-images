@@ -1,7 +1,9 @@
 # zcustom-images
 custom images used in various homelab projects
 
-[https://github.com/teamzuzu/zcustom-images/actions/workflows/build.yaml|build]
+[![build](https://github.com/teamzuzu/zcustom-images/actions/workflows/build.yaml/badge.svg)](https://github.com/teamzuzu/zcustom-images/actions/workflows/build.yaml)
+
+https://github.com/teamzuzu/zcustom-images/actions/workflows/build.yaml
 
 ## zuzu-devops
 
