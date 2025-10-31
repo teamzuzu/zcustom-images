@@ -1,25 +1,19 @@
 name: build
-inputs:
-  runner:
-    description: 'name of runner'
-    required: true
-    default: 'self-hosted'
-  image:
-    description: 'name of image'
-    required: true
-    default: 'test-image'
 on:
-  push:
-    paths:
-    - 'zuzu-devops/*'
   workflow_dispatch:
     inputs:
       runner:
+        description: 'name of runner'
+        required: true
+        default: 'self-hosted'
         type: choice
         options:
           - ubuntu-latest
           - self-hosted
       image:
+        description: 'name of image'
+        required: true
+        default: 'test-image'
         type: choice
         options:
           - zuzu-devops
@@ -34,8 +28,6 @@ env:
 
 jobs:
   build:
-
-    #runs-on: ubuntu-latest
     runs-on: ${{ github.event.inputs.runner }}
 
     permissions:
