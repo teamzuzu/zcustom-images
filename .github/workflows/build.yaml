@@ -1,8 +1,13 @@
 name: build
 
 on:
+  push:
+    paths:
+    - 'zuzu-devops/*'
+    inputs:
+      runner: 'self-hosted'
+      image: 'zuzu-devops'
   workflow_dispatch:
-
     inputs:
       runner:
         description: 'runner type'
