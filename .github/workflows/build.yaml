@@ -2,6 +2,7 @@ name: build
 
 on:
   workflow_dispatch:
+
     inputs:
       runner:
         description: 'runner type'
@@ -20,7 +21,7 @@ on:
           - zuzu-devops
           - puppet-r10k
           - test-image
-          - proxmox-datacenter-controller
+          - proxmox-datacenter-manager
 
 env:
   REGISTRY: ghcr.io
