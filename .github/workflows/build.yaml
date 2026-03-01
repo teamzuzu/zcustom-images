@@ -13,18 +13,16 @@ on:
       image:
         description: 'image'
         required: true
-        default: 'test-image'
+        default: 'zuzu-devops'
         type: choice
         options:
           - zuzu-devops
           - puppet-r10k
-          - test-image
-          - proxmox-datacenter-manager
           - scala-js-legacy
       platform:
         description: 'platform'
         required: true
-        default: 'linux/arm64,linux/amd64'
+        default: 'linux/amd64'
         type: choice
         options:
           - 'linux/arm64,linux/amd64'
