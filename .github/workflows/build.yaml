@@ -20,6 +20,7 @@ on:
           - puppet-r10k
           - test-image
           - proxmox-datacenter-manager
+          - scala-js-legacy
       platform:
         description: 'platform'
         required: true
