@@ -3,7 +3,7 @@ FROM fedora:40
 ENV SBT_VER=1.4.9
 ENV NODE_VER=10.13.0
 
-RUN yum install wget python2 make g++ -yq
+RUN yum install wget python2 make g++ docker -yq
 
 # sbt 
 RUN wget -nv -O /tmp/sbt.tar.gz "https://github.com/sbt/sbt/releases/download/v${SBT_VER}/sbt-${SBT_VER}.tgz" && tar xfz /tmp/sbt.tar.gz -C /usr/local/ --strip-components=1
