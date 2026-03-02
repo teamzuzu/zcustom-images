@@ -3,7 +3,7 @@ FROM fedora:40
 ENV SBT_VER=1.4.9
 ENV NODE_VER=10.13.0
 
-RUN dnv install wget python2 make g++ -yq
+RUN dnf install wget python2 make g++ -yq
 
 # docker 
 RUN dnf install 'dnf-command(config-manager)' -y && dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo && dnf install docker-ce -yq
