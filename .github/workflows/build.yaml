@@ -19,6 +19,7 @@ on:
           - zuzu-devops
           - puppet-r10k
           - scala-js-legacy
+          - smokeping
       platform:
         description: 'platform'
         required: true
