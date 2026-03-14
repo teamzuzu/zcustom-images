@@ -3,5 +3,4 @@
 @include /config/Database
 @include /config/Presentation
 @include /config/Probes
-@include /config/Slaves
 @include /config/Targets
