@@ -32,17 +32,6 @@ menu = Google
 title = google.com
 host = google.com
 
-++ GoogleSearchIpv6
-menu = Google
-probe = FPing6
-title = ipv6.google.com
-host = ipv6.google.com
-
-++ linuxserverio
-menu = linuxserver.io
-title = linuxserver.io
-host = linuxserver.io
-
 + Europe
 
 menu = Europe
@@ -146,11 +135,6 @@ host = 8.8.4.4
 menu = OpenDNS1
 title = OpenDNS1
 host = 208.67.222.222
-
-++ OpenDNS2
-menu = OpenDNS2
-title = OpenDNS2
-host = 208.67.220.220
 
 ++ CloudflareDNS1
 menu = Cloudflare DNS 1

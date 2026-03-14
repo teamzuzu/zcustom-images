@@ -1,7 +1,6 @@
 *** General ***
-
-owner    = LinuxServer.io
-contact  = admin@linuxserver.io
+owner    = teamzuzu
+contact  = teamzuzu
 mailhost = my.mail.host
 # NOTE: do not put the Image Cache below cgi-bin
 # since all files under cgi-bin will be executed ... this is not
