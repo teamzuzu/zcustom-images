@@ -2,24 +2,31 @@
 
 + FPing
 binary = /usr/sbin/fping
-offset = random
 pings = 5
 step = 20
 
-+ AnotherCurl
++ FPing6
+binary = /usr/sbin/fping
+protocol = 6
+
++ DNS
+binary = /usr/bin/dig
+lookup = google.com
+pings = 5
+step = 300
+
++ TCPPing
+binary = /usr/bin/tcpping
+forks = 10
+offset = random
+pings = 5
+port = 80
+
++ Curl
 binary = /usr/bin/curl
 forks = 5
 offset = random
 step = 60
 pings = 5
-urlformat = https://%host%/
+urlformat = http://%host%/
 extraargs = -s
-
-+ TCPPing
-step = 60
-binary = /usr/bin/tcpping
-forks = 5
-offset = random
-pings = 5
-port = 80
-
