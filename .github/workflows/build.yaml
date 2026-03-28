@@ -21,6 +21,7 @@ on:
           - scala-js-legacy
           - smokeping
           - zuzucams
+          - genx-website
       platform:
         description: 'platform'
         required: true
