@@ -22,6 +22,7 @@ on:
           - smokeping
           - zuzucams
           - genx-website
+          - mirror
       platform:
         description: 'platform'
         required: true
