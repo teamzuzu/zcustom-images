@@ -16,7 +16,7 @@ debug() {
 
 download_ubuntu() {
   log "Downloading Ubuntu cloud image..."
-  local release="jammy"  # 22.04 LTS
+  local release="resolute"
   local url="https://cloud-images.ubuntu.com/${release}/current/${release}-server-cloudimg-amd64.img"
 	if ! [ -e "${DOWNLOAD_DIR}/ubuntu-${release}.img" ] ; then
     debug "Ubuntu URL: $url"
