@@ -85,9 +85,9 @@ main() {
     log "Starting cloud image downloads to: $DOWNLOAD_DIR"
 
     download_ubuntu
-#    download_debian
-#    download_fedora
-#    download_arch
+    download_debian
+    download_fedora
+    download_arch
 
     log "✓ Download complete!"
     log "Images saved to: $DOWNLOAD_DIR"
