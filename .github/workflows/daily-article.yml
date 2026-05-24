@@ -30,7 +30,7 @@ jobs:
         id: article
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python scripts/generate_article.py
+        run: python genx-website/scripts/generate_article.py
 
       - name: Prepend article card to news section in index.html
         if: steps.article.outputs.filename != ''
@@ -69,17 +69,16 @@ jobs:
             </article>
           """
 
-          with open("index.html", "r") as f:
+          with open("genx-website/index.html", "r") as f:
               content = f.read()
 
-          # Insert before the first <article class="blog-card"
           content = content.replace(
               '\n    <article class="blog-card"',
               new_card + '\n    <article class="blog-card"',
               1,
           )
 
-          with open("index.html", "w") as f:
+          with open("genx-website/index.html", "w") as f:
               f.write(content)
 
           print(f"Prepended card for: {title}")
@@ -90,6 +89,6 @@ jobs:
         run: |
           git config user.name  "Genx Article Bot"
           git config user.email "bot@genx-sportsbook.io"
-          git add articles/${{ steps.article.outputs.filename }} index.html
+          git add genx-website/articles/${{ steps.article.outputs.filename }} genx-website/index.html
           git commit -m "chore: daily article — ${{ steps.article.outputs.title }}"
           git push
