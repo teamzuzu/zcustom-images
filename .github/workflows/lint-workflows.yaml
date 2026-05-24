@@ -18,9 +18,14 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v6
 
+      - name: install actionlint
+        env:
+          VERSION: 1.7.12
+        run: |
+          curl -fsSL "https://github.com/rhysd/actionlint/releases/download/v${VERSION}/actionlint_${VERSION}_linux_amd64.tar.gz" \
+            | tar xz actionlint
+          sudo mv actionlint /usr/local/bin/
+
       - name: lint workflow files
-        uses: rhysd/actionlint@v1.7.12
-        with:
-          # 'workflows' is a valid GITHUB_TOKEN permission scope (allows pushing to
-          # .github/workflows/); actionlint 1.7.12 incorrectly omits it from its list.
-          flags: "-ignore 'unknown permission scope \"workflows\"'"
+        run: |
+          actionlint -ignore 'unknown permission scope "workflows"' .github/workflows/*.yaml
