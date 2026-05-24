@@ -11,10 +11,19 @@ on:
           - ubuntu-latest
           - self-hosted
       image:
-        description: 'image (directory name containing a Dockerfile)'
+        description: 'image'
         required: true
         default: 'zuzu-devops'
-        type: string
+        type: choice
+        options:
+          - zuzu-devops
+          - genx-website
+          - iventoy
+          - mirror
+          - puppet-r10k
+          - scala-js-legacy
+          - smokeping
+          - zuzucams
       platform:
         description: 'platform'
         required: true
@@ -42,16 +51,6 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v6
-
-      - name: validate image
-        run: |
-          available=$(find . -maxdepth 2 -name Dockerfile | sed 's|/Dockerfile$||; s|^\./||' | sort | tr '\n' ' ')
-          echo "Available images: $available"
-          image="${{ github.event.inputs.image }}"
-          if [ ! -f "${image}/Dockerfile" ]; then
-            echo "::error::Unknown image '${image}'. Available: $available"
-            exit 1
-          fi
 
       - name: setup buildx
         uses: docker/setup-buildx-action@v4

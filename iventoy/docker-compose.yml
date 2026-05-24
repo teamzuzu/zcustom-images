@@ -1,0 +1,13 @@
+services:
+  iventoy:
+    image: ghcr.io/teamzuzu/iventoy:main
+    container_name: iventoy
+    restart: always
+    privileged: true
+    network_mode: host
+    volumes:
+      - ./isos:/app/iso
+      - ./config:/app/data
+    environment:
+      - AUTO_START_PXE=true
+

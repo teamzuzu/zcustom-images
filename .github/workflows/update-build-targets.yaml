@@ -1,0 +1,52 @@
+name: update build targets
+on:
+  push:
+    paths:
+      - '**/Dockerfile'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6
+
+      - name: sync image options in build.yaml
+        run: |
+          python3 << 'EOF'
+          import re, subprocess
+
+          images = subprocess.check_output(
+              "find . -maxdepth 2 -name Dockerfile | sed 's|/Dockerfile$||; s|^\\./||' | sort",
+              shell=True, text=True
+          ).strip().splitlines()
+
+          new_options = '\n'.join(f'          - {img}' for img in images)
+
+          with open('.github/workflows/build.yaml') as f:
+              content = f.read()
+
+          # Replace options list under the 'image' input block
+          pattern = r'(      image:(?:\n        [^\n]+)*?\n        options:\n)(?:          - [^\n]+\n)+'
+          replacement = r'\g<1>' + new_options + '\n'
+          updated = re.sub(pattern, replacement, content)
+
+          with open('.github/workflows/build.yaml', 'w') as f:
+              f.write(updated)
+
+          print("Image options set to:", images)
+          EOF
+
+      - name: commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet && echo "No changes" && exit 0
+          git add .github/workflows/build.yaml
+          git commit -m "chore: sync build targets from Dockerfiles"
+          git push
