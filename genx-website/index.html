@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4125667313511978"crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4125667313511978" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Genx-Sportsbook — The Worlds Only Sports CRYPTO Prediction Market Exchange</title>
+<title>Genx-Sportsbook — Sports Crypto Prediction Market Exchange</title>
 <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -26,7 +26,6 @@
     color: #fff;
     font-family: 'Rajdhani', sans-serif;
     overflow-x: hidden;
-    cursor: crosshair;
   }
 
   /* GRID BACKGROUND */
@@ -713,6 +712,102 @@
     color: rgba(255,255,255,0.6);
   }
 
+  /* ─── BLOG / NEWS SECTION ─── */
+  .blog-section { background: rgba(0,0,0,0.2); }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5px;
+    margin-top: 3rem;
+    background: rgba(0,245,255,0.06);
+    border: 1px solid rgba(0,245,255,0.08);
+  }
+
+  .blog-card {
+    background: var(--dark-bg);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blog-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--card-color, var(--neon-cyan));
+    box-shadow: 0 0 10px var(--card-color, var(--neon-cyan));
+  }
+
+  .blog-card:hover { background: rgba(0,245,255,0.02); }
+
+  .blog-category {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--card-color, var(--neon-cyan));
+    text-shadow: 0 0 6px var(--card-color, var(--neon-cyan));
+    margin-bottom: 0.75rem;
+  }
+
+  .blog-date {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+  }
+
+  .blog-title {
+    font-family: 'Black Ops One', cursive;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: rgba(255,255,255,0.95);
+    margin-bottom: 1rem;
+  }
+
+  .blog-excerpt {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.55);
+    flex: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-read-more {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--card-color, var(--neon-cyan));
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: gap 0.2s, text-shadow 0.2s;
+  }
+
+  .blog-read-more:hover {
+    gap: 0.8rem;
+    text-shadow: 0 0 8px var(--card-color, var(--neon-cyan));
+  }
+
+  .blog-read-more::after { content: '→'; }
+
+  .blog-view-all {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+  }
+
   /* ─── CTA SECTION ─── */
   .cta-section {
     text-align: center;
@@ -884,13 +979,14 @@
 <header>
   <div class="logo">GENX<span>SPORTSBOOK</span></div>
   <nav>
-    <a href="#">AI Markets</a>
+    <a href="#">Markets</a>
     <a href="#">Leaderboard</a>
     <a href="#">Sports</a>
     <a href="#">Live</a>
+    <a href="#">News</a>
     <a href="#">Docs</a>
   </nav>
-  <a href="#" class="cta-btn">GENX AI</a>
+  <a href="#" class="cta-btn">Get Started</a>
 </header>
 
 <!-- HERO -->
@@ -906,13 +1002,11 @@
           <stop offset="100%" stop-color="rgba(0,245,255,0.05)"/>
         </linearGradient>
       </defs>
-      <!-- Horizontal lines -->
       <line x1="0" y1="200" x2="1400" y2="200" stroke="url(#gridFade)" stroke-width="1"/>
       <line x1="0" y1="160" x2="1400" y2="160" stroke="rgba(0,245,255,0.3)" stroke-width="0.7"/>
       <line x1="0" y1="120" x2="1400" y2="120" stroke="rgba(0,245,255,0.2)" stroke-width="0.5"/>
       <line x1="0" y1="80" x2="1400" y2="80" stroke="rgba(0,245,255,0.12)" stroke-width="0.4"/>
       <line x1="0" y1="40" x2="1400" y2="40" stroke="rgba(0,245,255,0.06)" stroke-width="0.3"/>
-      <!-- Vertical lines converging at vanishing point (700, 0) -->
       <line x1="700" y1="0" x2="0" y2="200" stroke="rgba(0,245,255,0.2)" stroke-width="0.5"/>
       <line x1="700" y1="0" x2="140" y2="200" stroke="rgba(0,245,255,0.2)" stroke-width="0.5"/>
       <line x1="700" y1="0" x2="280" y2="200" stroke="rgba(0,245,255,0.2)" stroke-width="0.5"/>
@@ -927,20 +1021,20 @@
     </svg>
   </div>
 
-  <p class="hero-eyebrow">// THE FUTURE OF SPORTS CRYPTO PREDICTION AI//</p>
+  <p class="hero-eyebrow">// Sports Crypto Prediction Market Exchange //</p>
 
   <h1 class="hero-title">
     <span class="line1">PREDICT.</span>
-    <span class="line2">GIGA PROFIT.</span>
+    <span class="line2">PROFIT.</span>
   </h1>
 
   <p class="hero-subtitle">
-    The world's most radical sports prediction exchange.
-    Trade outcome shares. Outfox the crowd. Cash out glory.<span class="blink">_</span>
+    A next-generation sports prediction exchange powered by crypto markets.
+    Trade outcome shares on the world's biggest sporting events.<span class="blink">_</span>
   </p>
 
   <div class="hero-buttons">
-    <button class="btn-primary">ENTER THE ARENA</button>
+    <button class="btn-primary">GET STARTED</button>
     <button class="btn-secondary">HOW IT WORKS</button>
   </div>
 </section>
@@ -990,8 +1084,8 @@
 <!-- LIVE MARKETS -->
 <section class="section">
   <span class="section-tag">// Live Markets //</span>
-  <h2 class="section-title" style="color: var(--neon-cyan); text-shadow: 0 0 30px rgba(0,245,255,0.4);">HOT CONTRACTS</h2>
-  <p style="color: rgba(255,255,255,0.5); font-size: 1rem; max-width: 600px; line-height: 1.6;">Trade outcome shares on the world's biggest AND smallest sporting events.</p>
+  <h2 class="section-title" style="color: var(--neon-cyan); text-shadow: 0 0 30px rgba(0,245,255,0.4);">ACTIVE CONTRACTS</h2>
+  <p style="color: rgba(255,255,255,0.5); font-size: 1rem; max-width: 600px; line-height: 1.6;">Trade outcome shares across the world's biggest sporting events, from major leagues to niche competitions.</p>
 
   <div class="markets-grid">
 
@@ -1097,11 +1191,10 @@
 <!-- SPORTS NEON SHOWCASE -->
 <section class="sports-showcase">
   <span class="section-tag">// Covered Sports //</span>
-  <h2 class="section-title" style="color: var(--neon-pink); text-shadow: 0 0 30px rgba(255,0,110,0.4);">EVERY ARENA. EVERY BET.</h2>
+  <h2 class="section-title" style="color: var(--neon-pink); text-shadow: 0 0 30px rgba(255,0,110,0.4);">EVERY SPORT. EVERY MARKET.</h2>
 
   <div class="sports-icons-row">
 
-    <!-- Football -->
     <div class="sport-icon-wrap" style="--icon-color: var(--neon-cyan)">
       <svg class="sport-icon-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="40" cy="40" rx="28" ry="20" fill="none" stroke="#00f5ff" stroke-width="2.5"/>
@@ -1111,12 +1204,10 @@
         <line x1="26" y1="33" x2="54" y2="33" stroke="#00f5ff" stroke-width="1.5" opacity="0.6"/>
         <line x1="26" y1="47" x2="54" y2="47" stroke="#00f5ff" stroke-width="1.5" opacity="0.6"/>
         <line x1="30" y1="55" x2="50" y2="55" stroke="#00f5ff" stroke-width="1.5" opacity="0.6"/>
-        <ellipse cx="40" cy="40" rx="28" ry="20" fill="none" stroke="#00f5ff" stroke-width="2.5" stroke-opacity="0.15" filter=""/>
       </svg>
       <span class="sport-icon-label">Football</span>
     </div>
 
-    <!-- Basketball -->
     <div class="sport-icon-wrap" style="--icon-color: var(--neon-orange)">
       <svg class="sport-icon-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
         <circle cx="40" cy="40" r="26" fill="none" stroke="#ff6600" stroke-width="2.5"/>
@@ -1129,7 +1220,6 @@
       <span class="sport-icon-label">Basketball</span>
     </div>
 
-    <!-- Soccer ball -->
     <div class="sport-icon-wrap" style="--icon-color: var(--neon-green)">
       <svg class="sport-icon-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
         <circle cx="40" cy="40" r="26" fill="none" stroke="#39ff14" stroke-width="2.5"/>
@@ -1140,10 +1230,9 @@
         <line x1="46" y1="38" x2="50" y2="52" stroke="#39ff14" stroke-width="1.2" opacity="0.5"/>
         <line x1="34" y1="38" x2="30" y2="52" stroke="#39ff14" stroke-width="1.2" opacity="0.5"/>
       </svg>
-      <span class="sport-icon-label">Soccer balls</span>
+      <span class="sport-icon-label">Soccer</span>
     </div>
 
-    <!-- Tennis -->
     <div class="sport-icon-wrap" style="--icon-color: var(--neon-yellow)">
       <svg class="sport-icon-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
         <circle cx="40" cy="40" r="26" fill="none" stroke="#ffe600" stroke-width="2.5"/>
@@ -1155,7 +1244,6 @@
       <span class="sport-icon-label">Tennis</span>
     </div>
 
-    <!-- F1 -->
     <div class="sport-icon-wrap" style="--icon-color: var(--neon-pink)">
       <svg class="sport-icon-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
         <path d="M 8 46 L 20 34 L 50 30 L 68 38 L 72 46 L 8 46 Z" fill="none" stroke="#ff006e" stroke-width="2.5"/>
@@ -1169,7 +1257,6 @@
       <span class="sport-icon-label">Formula 1</span>
     </div>
 
-    <!-- Boxing -->
     <div class="sport-icon-wrap" style="--icon-color: var(--neon-purple)">
       <svg class="sport-icon-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
         <path d="M 25 50 Q 20 40 28 30 Q 36 20 46 24 Q 58 26 58 38 L 56 52 Q 52 62 42 62 Q 32 62 25 50 Z" fill="none" stroke="#bf00ff" stroke-width="2.5"/>
@@ -1182,9 +1269,8 @@
       <span class="sport-icon-label">Boxing</span>
     </div>
 
-    <!-- Cricket -->
-    <div class="sport-icon-wrap" style="--icon-color: #00ffcc)">
-      <svg class="sport-icon-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="--icon-color: #00ffcc">
+    <div class="sport-icon-wrap" style="--icon-color: #00ffcc">
+      <svg class="sport-icon-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
         <rect x="34" y="16" width="12" height="38" rx="4" fill="none" stroke="#00ffcc" stroke-width="2.5"/>
         <line x1="30" y1="54" x2="50" y2="54" stroke="#00ffcc" stroke-width="2"/>
         <circle cx="26" cy="28" r="10" fill="none" stroke="#00ffcc" stroke-width="2" opacity="0.8"/>
@@ -1195,7 +1281,6 @@
       <span class="sport-icon-label" style="color: #00ffcc; text-shadow: 0 0 6px #00ffcc">Cricket</span>
     </div>
 
-    <!-- Hockey -->
     <div class="sport-icon-wrap" style="--icon-color: #00aaff">
       <svg class="sport-icon-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
         <line x1="30" y1="14" x2="30" y2="56" stroke="#00aaff" stroke-width="2.5"/>
@@ -1228,7 +1313,7 @@
         </svg>
       </div>
       <div class="step-title">FUND YOUR ACCOUNT</div>
-      <div class="step-desc">Deposit crypto or fiat. We anonymously deposit your funs into a quantum powered super-smart contract. Always in your control.</div>
+      <div class="step-desc">Deposit crypto or fiat. Your funds are held in a non-custodial smart contract — always in your control.</div>
     </div>
 
     <div class="step-card">
@@ -1242,7 +1327,7 @@
         </svg>
       </div>
       <div class="step-title">PICK YOUR MARKET</div>
-      <div class="step-desc">Browse billions of live and upcoming sports markets. Filter by sport, date, volume, or edge opportunity.</div>
+      <div class="step-desc">Browse thousands of live and upcoming sports markets. Filter by sport, date, volume, or category.</div>
     </div>
 
     <div class="step-card">
@@ -1255,7 +1340,7 @@
         </svg>
       </div>
       <div class="step-title">TRADE SHARES</div>
-      <div class="step-desc">Buy YES or NO or MAYBE shares. Prices move faster than real time based on. Sell any time for instant profit every time.</div>
+      <div class="step-desc">Buy YES or NO shares. Prices update in real time based on market activity. Sell at any time to lock in your position.</div>
     </div>
 
     <div class="step-card">
@@ -1271,7 +1356,7 @@
         </svg>
       </div>
       <div class="step-title">COLLECT WINNINGS</div>
-      <div class="step-desc">Correct predictions resolve to $0.011 per share fractional cosign. Payouts are encrypted instant, automatic, and gas-optimised.</div>
+      <div class="step-desc">Correct predictions resolve to $1 per share. Payouts are automatic and gas-optimised via smart contract.</div>
     </div>
   </div>
 </section>
@@ -1335,13 +1420,13 @@
 <!-- FEATURES -->
 <section class="section" style="background: rgba(0,0,0,0.3)">
   <span class="section-tag">// Platform //</span>
-  <h2 class="section-title" style="color: var(--neon-green); text-shadow: 0 0 30px rgba(57,255,20,0.4);">BUILT DIFFERENT</h2>
+  <h2 class="section-title" style="color: var(--neon-green); text-shadow: 0 0 30px rgba(57,255,20,0.4);">PLATFORM FEATURES</h2>
 
   <div class="features-grid">
     <div class="feature-card">
       <span class="feature-icon" style="color: var(--neon-cyan)">⚡</span>
       <div class="feature-title">Sub-second Execution</div>
-      <div class="feature-desc">Trades execute in under 200ms. Our matching engine processes 50,000 orders per second. You'll never miss a price.</div>
+      <div class="feature-desc">Trades execute in under 200ms. Our matching engine processes 50,000 orders per second, so you'll never miss a price.</div>
     </div>
     <div class="feature-card">
       <span class="feature-icon" style="color: var(--neon-pink)">🔐</span>
@@ -1356,12 +1441,12 @@
     <div class="feature-card">
       <span class="feature-icon" style="color: var(--neon-purple)">🧠</span>
       <div class="feature-title">AI Probability Engine</div>
-      <div class="feature-desc">Our model aggregates stats, injuries, weather, and sentiment in real time. See where the smart money is flowing.</div>
+      <div class="feature-desc">Our model aggregates stats, injuries, weather, and sentiment in real time to surface where market consensus is forming.</div>
     </div>
     <div class="feature-card">
       <span class="feature-icon" style="color: var(--neon-green)">💸</span>
       <div class="feature-title">1% Maker Fee</div>
-      <div class="feature-desc">Lowest fees in the market. Provide liquidity and earn rebates. Zero withdrawal fees, ever.</div>
+      <div class="feature-desc">Competitive fees across the board. Provide liquidity and earn rebates. Zero withdrawal fees, ever.</div>
     </div>
     <div class="feature-card">
       <span class="feature-icon" style="color: var(--neon-orange)">🌍</span>
@@ -1371,18 +1456,57 @@
   </div>
 </section>
 
+<!-- NEWS & BLOG SECTION -->
+<section class="section blog-section" id="news">
+  <span class="section-tag">// Insights //</span>
+  <h2 class="section-title" style="color: var(--neon-cyan); text-shadow: 0 0 30px rgba(0,245,255,0.4);">LATEST NEWS</h2>
+  <p style="color: rgba(255,255,255,0.5); font-size: 1rem; max-width: 600px; line-height: 1.6;">Analysis, platform updates, and sports market insights from the Genx team.</p>
+
+  <div class="blog-grid">
+
+    <article class="blog-card" style="--card-color: var(--neon-cyan)">
+      <div class="blog-category">Market Intelligence</div>
+      <div class="blog-date">24 May 2026</div>
+      <h3 class="blog-title">Kalshi's $22 Billion Gamble — And Why the Smart Money Is Watching</h3>
+      <p class="blog-excerpt">Kalshi raised $1B at a $22B valuation and commands 90% of US prediction market activity. But criminal charges in Arizona and a Nevada ban reveal the cracks beneath the surface.</p>
+      <a href="articles/kalshi-billion-dollar-rise.html" class="blog-read-more">Read more</a>
+    </article>
+
+    <article class="blog-card" style="--card-color: var(--neon-purple)">
+      <div class="blog-category">Market Analysis</div>
+      <div class="blog-date">20 May 2026</div>
+      <h3 class="blog-title">F1 2026: How the New Regulations Are Shifting the Odds</h3>
+      <p class="blog-excerpt">With a major regulation reset underway, prediction markets are showing unusual volatility in the constructor standings. We break down what the data suggests.</p>
+      <a href="#" class="blog-read-more">Read more</a>
+    </article>
+
+    <article class="blog-card" style="--card-color: var(--neon-pink)">
+      <div class="blog-category">Sports Intelligence</div>
+      <div class="blog-date">15 May 2026</div>
+      <h3 class="blog-title">Premier League Title Race: Market Consensus vs Pundit Picks</h3>
+      <p class="blog-excerpt">With five gameweeks remaining, we compare what the prediction markets are saying against mainstream media forecasts — and where the gaps might represent opportunity.</p>
+      <a href="#" class="blog-read-more">Read more</a>
+    </article>
+
+  </div>
+
+  <div class="blog-view-all">
+    <a href="#" class="cta-btn">View All Articles</a>
+  </div>
+</section>
+
 <!-- CTA SECTION -->
 <section class="cta-section">
   <h2 class="cta-title">
-    <span>YOUR EDGE.</span>
+    <span>YOUR KNOWLEDGE.</span>
     <span>YOUR CALL.</span>
   </h2>
-  <p class="cta-desc">Join 847,000 traders already profiting from their sports knowledge. Free to sign up. No KYC for amounts under $10K.</p>
+  <p class="cta-desc">Join thousands of traders on the world's leading sports prediction exchange. Free to sign up.</p>
   <div class="email-form">
     <input type="email" class="email-input" placeholder="Enter your email address">
     <button class="email-submit">GET EARLY ACCESS</button>
   </div>
-  <p style="margin-top: 1.2rem; font-family: 'Share Tech Mono', monospace; font-size: 0.72rem; color: rgba(255,255,255,0.25); letter-spacing: 0.1em;">// NO SPAM. NO JUNK. JUST ALPHA. //</p>
+  <p style="margin-top: 1.2rem; font-family: 'Share Tech Mono', monospace; font-size: 0.72rem; color: rgba(255,255,255,0.25); letter-spacing: 0.1em;">// No spam. Unsubscribe anytime. //</p>
 </section>
 
 <!-- FOOTER -->
@@ -1393,10 +1517,10 @@
     <a href="#">Docs</a>
     <a href="#">API</a>
     <a href="#">Careers</a>
-    <a href="#">Blog</a>
+    <a href="#news">News</a>
     <a href="#">Terms</a>
   </div>
-  <div class="footer-copy">© 2026 GENX-SPORTSBOOK INC. // ALL RIGHTS RESERVED</div>
+  <div class="footer-copy">© 2026 GENX-SPORTSBOOK INC. ALL RIGHTS RESERVED</div>
 </footer>
 
 </div>
@@ -1413,10 +1537,10 @@
 
   // Stat counter animation
   const stats = [
-    { el: document.querySelectorAll('.stat-num')[0], target: 4.2, prefix: '$', suffix: 'B', decimals: 1 },
-    { el: document.querySelectorAll('.stat-num')[1], target: 847, prefix: '', suffix: 'K', decimals: 0 },
-    { el: document.querySelectorAll('.stat-num')[2], target: 12400, prefix: '', suffix: '', decimals: 0 },
-    { el: document.querySelectorAll('.stat-num')[3], target: 94.7, prefix: '', suffix: '%', decimals: 1 },
+    { el: document.querySelectorAll('.stat-num')[0], target: 42.2, prefix: '$', suffix: 'B', decimals: 1 },
+    { el: document.querySelectorAll('.stat-num')[1], target: 847,  prefix: '',  suffix: 'K', decimals: 0 },
+    { el: document.querySelectorAll('.stat-num')[2], target: 12400, prefix: '', suffix: '',  decimals: 0 },
+    { el: document.querySelectorAll('.stat-num')[3], target: 98.7, prefix: '',  suffix: '%', decimals: 1 },
   ];
 
   const animateCounter = (stat) => {
@@ -1446,7 +1570,6 @@
   if (statsBar) observer.observe(statsBar);
 
   // Animate prob bars on scroll
-  const probBars = document.querySelectorAll('.prob-fill');
   const barObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
