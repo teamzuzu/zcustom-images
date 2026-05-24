@@ -28,4 +28,4 @@ jobs:
 
       - name: lint workflow files
         run: |
-          actionlint -ignore 'unknown permission scope "workflows"' .github/workflows/*.yaml
+          actionlint .github/workflows/*.yaml
