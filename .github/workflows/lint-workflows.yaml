@@ -1,0 +1,26 @@
+name: lint workflows
+on:
+  push:
+    paths:
+      - '.github/workflows/**'
+  pull_request:
+    paths:
+      - '.github/workflows/**'
+
+jobs:
+  actionlint:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6
+
+      - name: lint workflow files
+        uses: rhysd/actionlint@v1.7.12
+        with:
+          # 'workflows' is a valid GITHUB_TOKEN permission scope (allows pushing to
+          # .github/workflows/); actionlint 1.7.12 incorrectly omits it from its list.
+          flags: "-ignore 'unknown permission scope \"workflows\"'"
