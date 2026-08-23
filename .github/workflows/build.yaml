@@ -17,13 +17,7 @@ on:
         type: choice
         options:
           - zuzu-devops
-          - genx-website
-          - iventoy
-          - mirror
           - puppet-r10k
-          - scala-js-legacy
-          - smokeping
-          - zuzucams
       platform:
         description: 'platform'
         required: true
