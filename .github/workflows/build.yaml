@@ -18,15 +18,16 @@ on:
         options:
           - zuzu-devops
           - puppet-r10k
+          - obvs
       platform:
         description: 'platform'
         required: true
         default: 'linux/amd64'
         type: choice
         options:
-          - 'linux/arm64,linux/amd64'
           - 'linux/amd64'
           - 'linux/arm64'
+          - 'linux/arm64,linux/amd64'
 
 env:
   REGISTRY: ghcr.io
