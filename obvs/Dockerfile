@@ -1,6 +1,6 @@
 # Docker container for Observium Community Edition
 
-FROM ubuntu:26.04
+FROM ubuntu:24.04
 
 ARG FETCH_VERSION=latest
 ARG OBSERVIUM_ADMIN_USER=admin
